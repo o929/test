@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab Report Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    .lab-form {
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      max-width: 800px;
+      margin: auto;
+      border-radius: 8px;
+    }
+    h2 {
+      text-align: center;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .section label {
+      display: inline-block;
+      width: 120px;
+      font-weight: bold;
+    }
+    .section input {
+      width: 200px;
+      padding: 4px;
+      margin-bottom: 8px;
+    }
+    .box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .box h3 {
+      margin-top: 0;
+      font-size: 1em;
+      background: #eee;
+      padding: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="lab-form">
+    <h2>Lab Report</h2>
+
+    <div class="section">
+      <label>Patient Name:</label><input type="text" name="patientName"><br>
+      <label>Date:</label><input type="date" name="date"><br>
+    </div>
+
+    <div class="section">
+      <label>B.F Malaria:</label><select name="" id="">
+        <option value="positive">Positive</option>
+        <option value="negative">Negative</option>
+      </select><br>
+      <label>ICT Malaria:</label><input type="text" name="ictMalaria"><br>
+      <label>Hb:</label><input type="text" name="hb"><br>
+      <label>T.W.B.C:</label><input type="text" name="twbc"><br>
+      <label>E.S.R:</label><input type="text" name="esr"><br>
+      <label>RF:</label><input type="text" name="rf"><br>
+      <label>ASO:</label><input type="text" name="aso"><br>
+      <label>RBS:</label><input type="text" name="rbs"><br>
+      <label>FBS:</label><input type="text" name="fbs"><br>
+      <label>2HPP:</label><input type="text" name="hpp"><br>
+    </div>
+
+    <div class="box">
+      <h3>Urine General</h3>
+      <label>Colour:</label><input type="text" name="urineColour">
+      <select id="urineColourSelect" onchange="updateSelectColor(this)">
+  <option value="clear" style="background-color: rgb(255, 123, 0);">Clear</option>
+  <option value="cloudy" style="background-color: rgb(255, 196, 0);">Cloudy</option>
+  <option value="dark" style="background-color: rgb(229, 255, 0);">Dark</option>
+</select>
+<br>
+      <label>Reaction:</label><input type="text" name="urineReaction"><br>
+      <label>Sugar:</label><input type="text" name="urineSugar"><br>
+      <label>Albumin:</label><input type="text" name="urineAlbumin"><br>
+      <!-- Add more fields as needed -->
+    </div>
+
+ <div class="box">
+  <h3>Stool General</h3>
+  <label>Colour:<input type="text" name="stoolColour"></label>
+  <select id="stoolColourSelect" onchange="updateSelectColor(this)">
+    <option value="brown" style="background-color: rgb(139,69,19);">Brown</option>
+    <option value="yellow" style="background-color: rgb(255, 255, 102);">Yellow</option>
+    <option value="green" style="background-color: rgb(102, 255, 102);">Green</option>
+    <option value="black" style="background-color: rgb(0,0,0); color: white;">Black</option>
+  </select>
+  <br>
+  <label>Consistency:</label><input type="text" name="stoolConsistency"><br>
+  <label>Mucous:</label><input type="text" name="stoolMucous"><br>
+  <label>Blood:</label><input type="text" name="stoolBlood"><br>
+  <label>Worms:</label><input type="text" name="stoolWorms"><br>
+</div>
+
+
+    <div class="section">
+      <label>Sign:</label><input type="text" name="sign"><br>
+    </div>
+  </div>
+  <button >Send to the doctor</button>
+  <script>
+  function updateSelectColor(selectElement) {
+    const selectedOption = selectElement.options[selectElement.selectedIndex];
+    const bgColor = selectedOption.style.backgroundColor;
+    selectElement.style.backgroundColor = bgColor;
+  }
+  function updateSelectColor(selectElement) {
+  const selectedOption = selectElement.options[selectElement.selectedIndex];
+  const bgColor = selectedOption.style.backgroundColor;
+  selectElement.style.backgroundColor = bgColor;
+}
+</script>
+
+</body>
+</html>
